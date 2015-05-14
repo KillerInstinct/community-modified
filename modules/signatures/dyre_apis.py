@@ -29,6 +29,7 @@ class Dyre_APIs(Signature):
     families = ["dyre", "mini-dyre"]
     authors = ["Accuvant", "KillerInstinct"]
     minimum = "1.3"
+    weight = 3
     evented = True
 
     def __init__(self, *args, **kwargs):

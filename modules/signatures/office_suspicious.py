@@ -22,6 +22,8 @@ class Office_Suspicious(Signature):
     categories = ["office"]
     authors = ["KillerInstinct"]
     minimum = "0.5"
+    confidence = 100
+    weight = 3
 
     def run(self):
         ret = False

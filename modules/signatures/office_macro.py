@@ -22,6 +22,8 @@ class Office_Macro(Signature):
     categories = ["office"]
     authors = ["KillerInstinct"]
     minimum = "0.5"
+    confidence = 100
+    weight = 1
 
     def run(self):
         ret = False
@@ -59,6 +61,7 @@ class Office_Macro(Signature):
                     if lure in string.lower():
                         if string not in positives:
                             positives.append(string)
+                            self.weight += 1
 
             if positives != []:
                 self.severity = 3
@@ -73,6 +76,7 @@ class Office_Macro(Signature):
                     words = self.results["static"]["Metadata"]["SummaryInformation"]["num_words"]
                     if words == "0":
                         self.severity = 3
+                        self.weight += 2
                         self.description += " The file also appears to have no content."
 
         return ret

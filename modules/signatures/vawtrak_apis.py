@@ -24,6 +24,7 @@ class Vawtrak_APIs(Signature):
     families = ["vawtrak", "neverquest"]
     authors = ["KillerInstinct"]
     minimum = "1.3"
+    weight = 3
     evented = True
 
     filter_apinames = set(["CreateToolhelp32Snapshot", "Process32FirstW", "Process32NextW",

@@ -17,7 +17,7 @@ try:
     import re2 as re
 except ImportError:
     import re
-    
+
 from lib.cuckoo.common.abstracts import Signature
 
 class BetaBot_APIs(Signature):
@@ -29,6 +29,7 @@ class BetaBot_APIs(Signature):
     families = ["betabot", "neurevt"]
     authors = ["KillerInstinct"]
     minimum = "1.2"
+    weight = 3
     evented = True
 
     def __init__(self, *args, **kwargs):

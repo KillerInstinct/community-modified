@@ -28,6 +28,8 @@ class Dridex_APIs(Signature):
     families = ["dridex"]
     authors = ["KillerInstinct"]
     minimum = "1.3"
+    weight = 3
+    confidence = 90
     evented = True
 
     def __init__(self, *args, **kwargs):
