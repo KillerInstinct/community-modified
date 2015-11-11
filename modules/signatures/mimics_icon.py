@@ -14,16 +14,21 @@ class MimicsIcon(Signature):
 
     def run(self):
         badhashes = [
-            # newer word doc icon
+            # Office 365 Application Logo
+            "4e623298caf36bc642543408fee2fd10",
+            # Word 2007+ Application Logo
+            "bad3afc82412906dc308db9d96f95e88",
+            # Word 2007+
             "ec7e6f5458456dddb2d826bf1b8b03a2",
-            # PDF icon
+            # Adobe PDF icon
             "6890c8a40c2eb5ff973159eca0428d6e",
             "2c45339aea71418c49248aa88ffb2378",
             "059dcdf32e800b5f2fe2aea2d5f045d8",
             "9334967a316ffffd255aaf9224a7da5e",
             "e52d1e9d64fd9535bf10f6da1091df9d",
             "b686a61a6fbd20073faf430128597795",
-            
+            # Fake PDF icon
+            "f042192565667b350a5056af6ce01d5c",
         ]
 
         if "static" in self.results and "pe" in self.results["static"]  and "icon_fuzzy" in self.results["static"]["pe"]:
